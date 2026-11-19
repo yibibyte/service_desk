@@ -7,7 +7,6 @@ from . import models
 from .db import engine
 from .routers import ALL_ROUTERS
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     models.Base.metadata.create_all(engine)

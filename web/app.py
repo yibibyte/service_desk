@@ -84,8 +84,8 @@ def requests_tab():
         desc = ui.textarea('Описание неисправности').props('outlined')
         prio = ui.select(['низкий', 'средний', 'высокий', 'критический'],
                          value='средний', label='Приоритет').props('outlined')
-        p_start = ui.date(value=None, label='Плановое начало')
-        p_end = ui.date(value=None, label='Плановое окончание')
+        p_start = ui.date_input('Плановое начало')
+        p_end = ui.date_input('Плановое окончание')
 
         def save():
             try:

@@ -1,3 +1,5 @@
+from datetime import date
+
 from sqlalchemy import (Boolean, CheckConstraint, Column, Date, ForeignKey,
                         Integer, Numeric, String)
 from sqlalchemy.orm import relationship

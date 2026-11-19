@@ -1,0 +1,9 @@
+[project]
+name = "servicedesk"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "backend>=0.2.4.1",
+    "nicegui>=4.0.0",
+    "requests>=2.34.2",
+]

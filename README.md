@@ -25,6 +25,9 @@ pip install -r requirements.txt
 export DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/service_desk
 uvicorn backend.main:app --reload --port 8000
 python -m backend.seed   # тестовые данные: admin/admin, master/master, user/user
+or
+uvicorn backend.main:app --reload --port 8000
+
 ```
 Swagger: http://localhost:8000/docs
 

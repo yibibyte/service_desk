@@ -3,10 +3,20 @@ import sys
 import requests
 from PyQt6 import uic
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import (QApplication, QDialog, QFormLayout, QLineEdit,
-                             QComboBox, QDialogButtonBox, QMessageBox)
+from PyQt6.QtWidgets import (
+    QApplication,
+    QComboBox,
+    QDialog,
+    QDialogButtonBox,
+    QFormLayout,
+    QLineEdit,
+    QMainWindow,
+    QMessageBox,
+    QTableWidgetItem,
+)
 
-API = 'http://localhost:8000/api'
+
+API = 'http://127.0.0.1:8000/api'
 UI_FILE = 'ui/main_window.ui'
 
 TOKEN = ''
@@ -189,9 +199,11 @@ def main():
                               json={'login': login, 'password': password}, timeout=5)
             r.raise_for_status()
             data = r.json()
-        except Exception:
-            QMessageBox.warning(None, 'Ошибка', 'Неверный логин/пароль или сервер недоступен')
+        except Exception as e:
+            err_text = getattr(e.response, 'text', str(e)) if hasattr(e, 'response') else str(e)
+            QMessageBox.warning(None, 'Ошибка', f'Детали: {err_text}')
             continue
+
         TOKEN = data['access_token']
         HEADERS = {'Authorization': f'Bearer {TOKEN}'}
         break
