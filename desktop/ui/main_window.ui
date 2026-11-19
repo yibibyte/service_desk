@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1000</width><height>640</height></rect>
+  </property>
+  <property name="windowTitle"><string>Учёт оборудования</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabs">
+      <widget class="QWidget" name="tabEquipment">
+       <attribute name="title"><string>Оборудование</string></attribute>
+       <layout class="QVBoxLayout" name="vl1">
+        <item>
+         <layout class="QHBoxLayout" name="hl1">
+          <item><widget class="QComboBox" name="statusFilter"/></item>
+          <item><widget class="QPushButton" name="btnRefresh"/></item>
+          <item><spacer name="sp1"><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><widget class="QTableWidget" name="tblEquipment"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabRequests">
+       <attribute name="title"><string>Заявки</string></attribute>
+       <layout class="QVBoxLayout" name="vl2">
+        <item><widget class="QPushButton" name="btnNewRequest"/></item>
+        <item><widget class="QTableWidget" name="tblRequests"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMaintenance">
+       <attribute name="title"><string>График ТО</string></attribute>
+       <layout class="QVBoxLayout" name="vl3">
+        <item><widget class="QPushButton" name="btnCompleteTo"/></item>
+        <item><widget class="QTableWidget" name="tblMaintenance"/></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
