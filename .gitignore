@@ -1,0 +1,28 @@
+# Виртуальное окружение и кэш пакетных менеджеров
+.venv/
+venv/
+env/
+.uv/
+
+# Кэш и скомпилированные файлы Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Настройки среды разработки PyCharm / JetBrains
+.idea/
+*.iml
+
+# Локальные файлы сессий и кэш NiceGUI
+.nicegui/
+
+# Локальные переменные окружения (пароли, ключи API)
+.env
+.env.local
+
+# Системные файлы Windows и macOS
+Thumbs.db
+desktop.ini
+.DS_Store
