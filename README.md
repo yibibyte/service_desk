@@ -64,3 +64,12 @@ flutter run
 - CASCADE: строки списанных материалов удаляются вместе с заявкой
 - Аутентификация: JWT, роли: администратор / мастер / сотрудник
 >>>>>>> master
+
+### 6. Запуск
+### Активировать окружение
+ - .\venv\Scripts\Activate.ps1
+#### Uvicorn
+ - uvicorn backend.main:app --reload
+#### python
+- python -m backend.main
+- 
